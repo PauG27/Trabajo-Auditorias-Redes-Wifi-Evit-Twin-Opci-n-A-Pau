@@ -5,13 +5,19 @@ En este tipo de ataque, se realiza el ataque Evil Twin contra una wifi que usa e
 
 
 Preparación de la antena WiFi
+
 •	Detección de la interfaz
 La antena fue detectada.
+
 •	Activación del modo monitor
 La interfaz se colocó en modo monitor, requisito indispensable para:
+
 •	Escanear redes
+
 •	Capturar tráfico
+
 •	Permitir la creación del AP falso
+
 Sin este paso previo no se podría realizar el ataque, repetir estos pasos nuevamen-te en caso de que falle la antena resolvería el problema.
 <img width="856" height="597" alt="image" src="https://github.com/user-attachments/assets/5f672c21-8da4-4d91-bd63-54e293a5dc12" />
 
@@ -19,10 +25,15 @@ Sin este paso previo no se podría realizar el ataque, repetir estos pasos nueva
 
 Ejecución de Airgeddon
 Al iniciar Airgeddon, se verificaron:
+
 •	Permisos root
+
 •	Resolución
+
 •	Compatibilidad con Kali
+
 •	Herramientas esenciales
+
 •	Herramientas opcionales
 En mi caso los errores mostrados en las capturas no afectan en la realización del ataque.
 <img width="636" height="205" alt="image" src="https://github.com/user-attachments/assets/60ea23d2-d994-45c8-ad67-d3e997b9269e" />
@@ -55,8 +66,11 @@ Airgeddon mostró la interfaz en modo monitor y permitió acceder al menú espec
 Exploración de objetivos
 Se realizó un escaneo de redes WPA/WPA2/WPA3. El sistema detectó múltiples redes y estaciones asociadas.
 La red seleccionada para la práctica fue:
+
 •	ESSID: CETI
+
 •	BSSID: 18:D6:C7:51:4E:68
+
 Airgeddon validó que la red era apta para un ataque Evil Twin con portal cautivo.
 
 
@@ -79,26 +93,35 @@ Este ataque es el único que no requiere una segunda interfaz con acceso a Inter
 
 Captura del Handshake / PMKID
 Airgeddon preguntó si ya se disponía de un handshake previo. Se seleccionó cap-turar uno nuevo.
+
 El sistema:
+
 •	Abrió dos ventanas (captura + desautenticación)
+
 •	Esperó 20 segundos
+
 •	Detectó correctamente un Handshake
+
 •	Detectó además un PMKID válido
+
 El archivo se guardó en la ruta propuesta.
 
  
 <img width="939" height="490" alt="image" src="https://github.com/user-attachments/assets/dfd40e9f-0708-4da0-b261-cc9722f69a21" />
 
 
-
-
-
 Levantamiento del punto de acceso falso (Evil Twin)
+
 Airgeddon inició automáticamente:
+
 •	Hostapd: Creación del AP falso
+
 •	Dnsmasq: servidor DHCP y DNS
+
 •	Lighttpd: servidor web del portal cautivo
+
 •	Mecanismo de autenticación: Para forzar reconexión del cliente
+
 En las ventanas se observaron:
 AP
 Autenticación y asociación del cliente de pruebas.
@@ -118,8 +141,11 @@ Estado del ataque, tiempo online y clientes conectados.
 Interacción del cliente con el portal cautivo
 El dispositivo móvil, al intentar conectarse a la red “CETI”, fue redirigido automáti-camente al portal falso.
 El portal mostraba:
+
 •	ESSID: CETI
+
 •	Formulario de contraseña
+
 •	Botón “Enviar”
 El usuario introdujo una contraseña incorrecta, lo que generó el mensaje:
 “Contraseña Wi-Fi incorrecta”
