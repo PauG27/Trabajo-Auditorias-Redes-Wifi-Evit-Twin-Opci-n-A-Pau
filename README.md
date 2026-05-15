@@ -86,7 +86,9 @@ Airgeddon validó que la red era apta para un ataque Evil Twin con portal cautiv
 
 Selección del ataque
 Se eligió la opción:
+
 9. Evil Twin AP attack with captive portal
+
 Este ataque es el único que no requiere una segunda interfaz con acceso a Inter-net.
  
 <img width="939" height="989" alt="image" src="https://github.com/user-attachments/assets/7cebe013-2c5a-47da-b66a-7a414dbc9d97" />
