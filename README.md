@@ -36,6 +36,7 @@ Al iniciar Airgeddon, se verificaron:
 •	Herramientas esenciales
 
 •	Herramientas opcionales
+
 En mi caso los errores mostrados en las capturas no afectan en la realización del ataque.
 
   <img width="636" height="205" alt="image" src="https://github.com/user-attachments/assets/60ea23d2-d994-45c8-ad67-d3e997b9269e" />
