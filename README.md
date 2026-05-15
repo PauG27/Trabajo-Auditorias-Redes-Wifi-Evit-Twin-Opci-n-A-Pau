@@ -187,6 +187,7 @@ Conclusión
 La práctica realizada permitió ejecutar de manera integral un ataque Evil Twin con portal cautivo, cubriendo satisfactoriamente todas las fases críticas: desde la configuración de la antena en modo monitor y el escaneo de redes mediante Airgeddon, hasta la captura del handshake y el despliegue de un punto de acceso falso con servicios DHCP, DNS y HTTP completamente funcionales. El éxito en la redirección del tráfico del cliente y la posterior obtención de credenciales a través del portal falso demostraron que, más allá de la robustez del cifrado, el factor humano sigue siendo un vector de riesgo determinante en redes WPA2-PSK. En conclusión, la experiencia subraya la vulnerabilidad de las redes con claves compartidas y la necesidad imperativa de adoptar estándares más seguros como WPA3, así como sistemas de monitorización activa para detectar este tipo de suplantaciones en tiempo real.
 
 Vídeo
+
 https://gvaedu-my.sharepoint.com/:u:/r/personal/paugarolm2_alu_edu_gva_es/Documents/Pau%20Garc%C3%ADa%20Video%20ataque.rar?csf=1&web=1&e=S22dVI
 
 
