@@ -18,7 +18,7 @@ La interfaz se colocó en modo monitor, requisito indispensable para:
 
 •	Permitir la creación del AP falso
 
-Sin este paso previo no se podría realizar el ataque, repetir estos pasos nuevamen-te en caso de que falle la antena resolvería el problema.
+Sin este paso previo no se podría realizar el ataque. En caso de que falle la antena, repetir estos pasos resolvería el problema.
 
    <img width="856" height="597" alt="image" src="https://github.com/user-attachments/assets/5f672c21-8da4-4d91-bd63-54e293a5dc12" />
 
@@ -55,7 +55,7 @@ En el menú principal se seleccionó antes del inicio del ataque la opción 2 WL
 
 
 7. Evil Twin attacks menú
-Airgeddon mostró la interfaz en modo monitor y permitió acceder al menú específico del ataque.
+Airgeddon mostró la interfaz en modo monitor y permitió acceder al menú específico del ataque, en nuestro caso será el 9.
 
 
 
@@ -86,7 +86,7 @@ Airgeddon validó que la red era apta para un ataque Evil Twin con portal cautiv
 Selección del ataque
 Se eligió la opción:
 9. Evil Twin AP attack with captive portal
-Este ataque es el único que no requiere una segunda interfaz con acceso a Inter-net, por lo que es ideal para entornos virtualizados.
+Este ataque es el único que no requiere una segunda interfaz con acceso a Inter-net.
  
 <img width="939" height="989" alt="image" src="https://github.com/user-attachments/assets/7cebe013-2c5a-47da-b66a-7a414dbc9d97" />
 
@@ -94,7 +94,7 @@ Este ataque es el único que no requiere una segunda interfaz con acceso a Inter
 
 
 Captura del Handshake / PMKID
-Airgeddon preguntó si ya se disponía de un handshake previo. Se seleccionó cap-turar uno nuevo.
+Airgeddon preguntó si ya se disponía de un handshake previo. (No seleccioné crear uno nuevo porque entraba en bucle, seguramente porque realicé el ataque varias veces y ya lo tenía, lo he explicado en el video).
 
 El sistema:
 
@@ -142,7 +142,7 @@ Estado del ataque, tiempo online y clientes conectados.
 
 
 Interacción del cliente con el portal cautivo
-El dispositivo móvil, al intentar conectarse a la red “CETI”, fue redirigido automáti-camente al portal falso.
+El dispositivo móvil, al intentar conectarse a la red “CETI”, fue redirigido automáticamente al portal falso.
 El portal mostraba:
 
 •	ESSID: CETI
@@ -182,3 +182,6 @@ Podemos consultar las credenciales capturadas en la ruta seleccionada, demos-tra
 Conclusión
 
 La práctica realizada permitió ejecutar de manera integral un ataque Evil Twin con portal cautivo, cubriendo satisfactoriamente todas las fases críticas: desde la configuración de la antena en modo monitor y el escaneo de redes mediante Airgeddon, hasta la captura del handshake y el despliegue de un punto de acceso falso con servicios DHCP, DNS y HTTP completamente funcionales. El éxito en la redirección del tráfico del cliente y la posterior obtención de credenciales a través del portal falso demostraron que, más allá de la robustez del cifrado, el factor humano sigue siendo un vector de riesgo determinante en redes WPA2-PSK. En conclusión, la experiencia subraya la vulnerabilidad de las redes con claves compartidas y la necesidad imperativa de adoptar estándares más seguros como WPA3, así como sistemas de monitorización activa para detectar este tipo de suplantaciones en tiempo real.
+
+
+
